@@ -17,4 +17,5 @@ jobs:
     - uses: satackey/action-docker-layer-caching@v0.0.11
     - name: Build the Docker image
       run: docker-compose run --no-deps web rails new . --force --database=postgresql
+      run: echo "yeeeee haaaawwwww"
 
