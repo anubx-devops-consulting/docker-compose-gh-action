@@ -22,7 +22,8 @@ jobs:
           ls -l
           ls -ld /repo
           ls -l /repo
-      run: docker-compose run --no-deps web rails new . --force --database=postgresql
+          docker-compose run --no-deps web rails new . --force --database=postgresql
+
     
   
 
