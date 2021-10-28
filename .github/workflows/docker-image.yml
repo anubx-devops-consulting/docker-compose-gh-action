@@ -20,8 +20,6 @@ jobs:
           pwd
           ls -ld .
           ls -l
-          ls -ld /repo
-          ls -l /repo
           docker-compose run --no-deps web rails new . --force --database=postgresql
 
     
