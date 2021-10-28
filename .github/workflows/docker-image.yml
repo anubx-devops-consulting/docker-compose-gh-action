@@ -16,6 +16,8 @@ jobs:
     - uses: actions/checkout@v2
     - uses: satackey/action-docker-layer-caching@v0.0.11
     - name: Build the Docker image
-      run: docker-compose run --no-deps web rails new . --force --database=postgresql
-      run: echo "yeeeee haaaawwwww"
+    - run: |
+            docker-compose run --no-deps web rails new . --force --database=postgresql
+            echo "yeeeee haaaawwwww"
+    - run: echo "one last message"
 
