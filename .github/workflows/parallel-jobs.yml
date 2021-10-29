@@ -29,9 +29,7 @@ jobs:
           touch test3.txt
           ls -ltr
   slack:
-    needs: setup
-    needs: build
-    needs: test
+    needs: [ setup, build, test ]
     runs-on: ubuntu-latest
     steps:
       - uses: iRoachie/slack-github-actions@v2.3.0
