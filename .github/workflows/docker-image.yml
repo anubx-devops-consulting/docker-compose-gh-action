@@ -1,5 +1,4 @@
-name: Docker Compose With Cached Layers
-
+name: Docker Compose Up
 on:
   push:
     branches: [ main ]
