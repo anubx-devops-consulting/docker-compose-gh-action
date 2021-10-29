@@ -16,7 +16,7 @@ fix it and submit a [pull request][pulls].
   [pulls]:     https://anubx.com
 
 
-[example]: https://user-images.githubusercontent.com/image-4.png "example image"
+[example]: https://img.freepik.com/free-vector/blue-bright-technological-background_36402-430.jpg?size=626&ext=jpg "example image"
 
 ![example]
 
@@ -28,7 +28,7 @@ lorem ipsum whatever lorem ipsum whatever lorem ipsum whatever
 [//]: # (This comment won't be rendered to the visitor!)
 
 
-<img src="https://some-img-host.com/1234567/image.png" width=300 align=right>
+<img src="https://img.freepik.com/free-vector/blue-bright-technological-background_36402-430.jpg?size=626&ext=jpg" width=300 align=right>
 
 ## COLOR!
 
