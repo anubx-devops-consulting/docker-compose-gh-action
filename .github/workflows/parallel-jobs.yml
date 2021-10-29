@@ -14,14 +14,14 @@ jobs:
           ls -ltr
           touch test1.txt
   build:
-    needs: setup
+  #  needs: setup
     runs-on: ubuntu-latest
     steps:
       - run: |
           ls -ltr
           touch test2.txt
   test:
-    needs: build
+  #  needs: build
     runs-on: ubuntu-latest
     steps:
       - run: |
