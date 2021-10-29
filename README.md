@@ -1,4 +1,10 @@
-[![Docker Image CI](https://github.com/anubx/docker-compose-gh-action/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/anubx/docker-compose-gh-action/actions/workflows/docker-image.yml)
+
+
+| [![Docker Image CI](https://github.com/anubx/docker-compose-gh-action/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/anubx/docker-compose-gh-action/actions/workflows/docker-image.yml)    | [![Docker Image CI](https://github.com/anubx/docker-compose-gh-action/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/anubx/docker-compose-gh-action/actions/workflows/docker-image.yml)    |
+|-------------|-------------|
+| Foo         | Bar         |
+
+
 
 [![Run Unit Tests](https://github.com/anubx/docker-compose-gh-action/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/anubx/docker-compose-gh-action/actions/workflows/unit-tests.yml)
 
