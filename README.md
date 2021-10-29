@@ -39,11 +39,9 @@ lorem ipsum whatever lorem ipsum whatever lorem ipsum whatever
 - ![#9900c5](https://placehold.it/15/9900c5?text=+) purple!
 - ![#157500](https://placehold.it/20/157500?text=+) green!
 
-![](https://placehold.it/400x90/ff0000/000000?text=IMPORTANT!)
 
-![](https://placehold.it/400x90/ff6600/000?text=WARNING!)
 
-![](https://placehold.it/350x90/009955/fff?text=SUCCESS!)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 
 
