@@ -17,3 +17,10 @@ jobs:
 #    - uses: satackey/action-docker-layer-caching@v0.0.11
     - name: SonarCloud Scan
     - uses: SonarSource/sonarcloud-github-action@v1.6    
+
+    - uses: iRoachie/slack-github-actions@v2.3.0
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          status: ${{ job.status }}
+        if: ${{ always() }}
