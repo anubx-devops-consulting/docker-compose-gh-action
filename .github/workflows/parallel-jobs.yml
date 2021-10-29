@@ -1,0 +1,30 @@
+name: Parallel Jobs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          ls -ltr
+          touch test1.txt
+  build:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          ls -ltr
+          touch test2.txt
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          ls -ltr
+          touch test3.txt
+          ls -ltr
