@@ -20,6 +20,12 @@ jobs:
           ls -ld .
           ls -l
           docker-compose run --no-deps web rails new . --force --database=postgresql
+    - uses: iRoachie/slack-github-actions@v2.3.0
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          status: ${{ job.status }}
+        if: ${{ always() }}
 
     
   
