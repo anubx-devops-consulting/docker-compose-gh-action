@@ -6,27 +6,21 @@ on:
     branches: [ main ]
 
 jobs:
-
-  build:
-
+  test:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - uses: satackey/action-docker-layer-caching@v0.0.11
-    - name: Build the Docker image
-      run: |
-          pwd
-          ls -ld .
-          ls -l
-          docker-compose run --no-deps web rails new . --force --database=postgresql
-    - uses: iRoachie/slack-github-actions@v2.3.0
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - run: echo "hello"
+      - run: echo "world"
+
+      - uses: iRoachie/slack-github-actions@v2.3.0
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
           status: ${{ job.status }}
         if: ${{ always() }}
-
     
   
 
