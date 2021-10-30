@@ -7,14 +7,14 @@ on:
     branches: [ '**' ]
 
 jobs:
-  setup:
+  mocha:
     runs-on: ubuntu-latest
     steps:
       - uses: satackey/action-docker-layer-caching@v0.0.11
       - run: |
           ls -ltr
           touch test1.txt
-  build:
+  rubocop:
   #  needs: setup
     runs-on: ubuntu-latest
     steps:
@@ -22,7 +22,7 @@ jobs:
       - run: |
           ls -ltr
           touch test2.txt
-  test:
+  brakeman:
   #  needs: build
     runs-on: ubuntu-latest
     steps:
@@ -31,8 +31,21 @@ jobs:
           ls -ltr
           touch test3.txt
           ls -ltr
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - uses: satackey/action-docker-layer-caching@v0.0.11
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   slack:
-    needs: [ setup, build, test ]
+    needs: [ mocha, rubocop, brakeman, sonarcloud ]
     runs-on: ubuntu-latest
     steps:
       - uses: satackey/action-docker-layer-caching@v0.0.11
