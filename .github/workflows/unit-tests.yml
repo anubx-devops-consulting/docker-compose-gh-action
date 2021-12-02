@@ -18,7 +18,9 @@ jobs:
     - uses: satackey/action-docker-layer-caching@v0.0.11
     - name: Build the Docker image
       run: |
+          bash
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+          source ~/.bashrc
           nvm --version
           node --version
           ls -ld .
