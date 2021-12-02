@@ -15,8 +15,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: satackey/action-docker-layer-caching@v0.0.11
-    - name: Build the Docker image
+#     - uses: satackey/action-docker-layer-caching@v0.0.11
+    - name: mocha tests
       run: |
           bash
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash || true
@@ -24,7 +24,7 @@ jobs:
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           bash
           source ~/.bashrc
-          nvm --version
+          nvm install v10.4.0
           node --version
-          ls -ld .
-          ls -ltr
+          yarn --version
+          run-p
