@@ -19,5 +19,6 @@ jobs:
     - name: Build the Docker image
       run: |
           nvm --version
+          node --version
           ls -ld .
-          ls -l
+          ls -ltr
