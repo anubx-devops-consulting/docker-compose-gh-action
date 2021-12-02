@@ -27,4 +27,4 @@ jobs:
           nvm install v10.4.0
           node --version
           yarn --version
-          npm -i run-p
+          npm i run-p
